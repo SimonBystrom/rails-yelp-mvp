@@ -11,3 +11,25 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+.restaurant-container {
+  margin-bottom: 20px;
+  position: relative;
+  transition: all .2s ease-in-out;
+}
+
+.restaurant-container:hover {
+  transform: scale(1.02);
+}
+
+.restaurant-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.review-card {
+  width: 300px
+}

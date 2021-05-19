@@ -1,2 +1,29 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<h1 class="mt-5 mb-4"> <%= @restaurant.name %> </h1>
+<div class="d-flex justify-content-between">
+  <div class="card shadow-sm ms-3">
+    <div class="card-body">
+      <h4 class="card-text"> <%= @restaurant.category %> </h4>
+      <h4 class="card-text"><strong>Address: </strong> <%= @restaurant.address %> </h4>
+      <h4 class="card-text"><strong>Tel: </strong> <%= @restaurant.phone_number %> </h4>
+    </div>
+  </div>
+  <div>
+    <% @restaurant.reviews.each do |review| %>
+      <div class="card shadow-sm mb-2 review-card">
+        <div class="card-body">
+          <div class="d-flex">
+            <% review.rating.times do  %>
+              <i class="fas fa-star"></i>
+            <% end %>
+            <% ( 5 - review.rating ).times do  %>
+              <i class="far fa-star"></i>
+            <% end %>
+          </div>
+
+          <p class="card-text"> <%= review.content %> </p>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</div>
