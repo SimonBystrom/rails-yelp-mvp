@@ -1,4 +1,4 @@
-
+<div class="form-wrapper">
   <%= simple_form_for(restaurant) do |f| %>
     <%= f.input :name, class: 'mb-2'%>
     <%= f.input :address %>
@@ -6,3 +6,6 @@
     <%= f.input :category, collection: Restaurant::CATEGORIES, include_blank: false %>
     <%= f.submit 'Add', class: 'btn btn-primary mt-3' %>
   <% end %>
+
+</div>
+
